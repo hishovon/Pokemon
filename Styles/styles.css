@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+
+
+/* General Body */
+.body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Press Start 2P', cursive;
+  background: #000;
+  color: #fff;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+/* Header */
+.header {
+  padding: 20px;
+  font-size: 22px;
+  color: red;
+  text-shadow: 3px 3px #000, -3px -3px #fff;
+  animation: bounce 1.1s infinite alternate;
+}
+
+@keyframes bounce {
+  from { transform: translateY(0); }
+  to   { transform: translateY(-12px); }
+}
+
+/* Button */
+.btn {
+  display: inline-block;
+  margin: 20px;
+  padding: 12px 22px;
+  background: #f00;
+  color: #fff;
+  border: 3px solid #000;
+  font-size: 12px;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 3px 3px #000;
+  transition: transform .12s ease, background .12s ease;
+}
+
+.btn:hover {
+  background: green;
+  color: #000;
+  transform: scale(1.06);
+}
+
+/* Pokéball Loader */
+.pokeball {
+  width: 80px;
+  height: 80px;
+  border: 4px solid #000;
+  border-radius: 50%;
+  margin: 60px auto 20px;
+  position: relative;
+  background: linear-gradient(to bottom, red 50%, white 50%);
+  animation: spin 2s linear infinite;
+}
+
+.pokeball::before {
+  content: "";
+  position: absolute;
+  top: 36px;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background: black;
+}
+
+.pokeball::after {
+  content: "";
+  position: absolute;
+  top: 28px;
+  left: 28px;
+  width: 24px;
+  height: 24px;
+  background: white;
+  border: 4px solid black;
+  border-radius: 50%;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* Loading text */
+.loading-text {
+  font-size: 14px;
+  margin-top: 10px;
+  color: #ff0;
+}
+
+.image{
+
+
+
+
+}
+
+@import "tailwindcss";

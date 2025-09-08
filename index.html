@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <title>Pokemon wants you</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Pixel font -->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="Styles/styles.css">
+  <link rel="stylesheet" href=".src/input.css">
+  <link href="./output.css" rel="stylesheet">
+  <link rel="stylesheet" href="src/app.css">
+
+  <style>
+    @keyframes walkAcross {
+      0% { left: -20vw; }
+      100% { left: 100vw; }
+    }
+
+    .animate-walk {
+      position: absolute;
+      animation: walkAcross 8s linear infinite;
+    }
+  </style>
+</head>
+<body class=" body text-white">
+
+  
+
+  <!-- Header -->
+  <header class="header text-2xl sm:text-4xl mt-10 text-center font-bold">
+    Welcome to Pokémon World
+  </header>
+
+  <!-- Button -->
+  <div class="controls flex justify-center mt-6">
+    <button class="btn bg-yellow-400 text-black px-6 py-3 rounded-lg shadow-lg hover:bg-yellow-300 transition cursor-pointer" id="startBtn">
+      Start your journey
+    </button>
+  </div>
+
+  <!-- Pokéball Loader (hidden by default) -->
+  <div id="loader" class="hidden flex flex-col items-center mt-10">
+    <div class="pokeball"></div>
+    <p class="loading-text mt-2">Loading...</p>
+  </div>
+
+  <!-- Timeline Cards -->
+  <div class="card flex flex-col lg:flex-row mt-16 items-center bg-base-100 shadow-md rounded-xl p-6">
+    <figure class="w-full lg:w-1/2 flex justify-center">
+      <img class="max-w-xs sm:max-w-sm md:max-w-md" src="../Pokemon/image/8redelul5udl2kj5iuqrld8ukt-0d34a4239a497a0dd4cd8119d42ec20e.png" alt="">
+    </figure>
+    <div class="card-body text-sm md:text-base mt-6 lg:mt-0 lg:ml-8">
+      <h2 class="card-title text-amber-400 text-lg md:text-xl">February, 1996</h2>
+      <p class="mt-4 lg:text-base">
+        In April 1998, Pokémon Center Co., Ltd. is established by the original authors of Pokémon: Nintendo Co., Ltd., Creatures Inc. and GAME FREAK inc. The company name was changed to The Pokémon Company in October 2000. Since then, our business activities have expanded to overall management of the Pokémon brand.
+      </p>
+    </div>
+  </div>
+
+  <!-- Pikachu Walking Animation -->
+  <div class="relative w-full h-32 overflow-hidden flex items-center justify-center my-10">
+    <img 
+      src="../Pokemon/image/pokedexofmylife.gif" 
+      alt="Walking Pikachu" 
+      class="absolute h-16 sm:h-20 md:h-24 animate-walk"
+    >
+  </div>
+
+  <div class="card flex flex-col lg:flex-row mt-16 items-center bg-base-100 shadow-md rounded-xl p-6">
+    <div class="card-body text-sm md:text-base lg:mr-8">
+      <h2 class="card-title text-amber-400 text-lg md:text-xl">April, 1997</h2>
+      <p class="mt-4 lg:text-base">
+        The TV anime series Pokémon debuts on TV Tokyo in Japan, introducing Ash Ketchum (Satoshi in Japan) and Pikachu, quickly becoming a cultural phenomenon. Also TV anime series “Pokémon” is launched on TV Tokyo in Japan.
+      </p>
+    </div>
+    <figure class="w-full lg:w-1/2 flex justify-center mt-6 lg:mt-0">
+      <img class="max-w-xs sm:max-w-sm md:max-w-md" src="../Pokemon/image/img-03-removebg-preview.png" alt="">
+    </figure>
+  </div>
+
+  <!-- Script -->
+  <script>
+    const startBtn = document.getElementById('startBtn');
+    const loader = document.getElementById('loader');
+    const header = document.querySelector('.header');
+    const controls = document.querySelector('.controls');
+
+    startBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+
+      header.style.display = "none";
+      controls.style.display = "none";
+      loader.classList.remove("hidden");
+
+      setTimeout(() => {
+        window.location.href = "journey.html";
+      }, 2000);
+    });
+  </script>
+</body>
+</html>
