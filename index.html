@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="scroll-smooth md:scroll-auto" lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -19,15 +19,31 @@
   <link href="./output.css" rel="stylesheet">
   <link rel="stylesheet" href="src/app.css">
 
+<!--pickachu-->
+
+<style>
+  @keyframes pikachuRun {
+    0% { left: -20vw; }
+    100% { left: 100vw; }
+  }
+
+  .animate-pikachu {
+    position: absolute;
+    animation: pikachuRun 0.1s linear infinite;
+  }
+</style>
+
+<!--Charizard flying-->
+
   <style>
     @keyframes walkAcross {
-      0% { left: -20vw; }
-      100% { left: 100vw; }
+      0% { right: -20vw; }
+      100% { right: 100vw; }
     }
 
-    .animate-walk {
+    .animate-fly {
       position: absolute;
-      animation: walkAcross 8s linear infinite;
+      animation: walkAcross 10s linear infinite;
     }
   </style>
 </head>
@@ -67,13 +83,16 @@
   </div>
 
   <!-- Pikachu Walking Animation -->
+
   <div class="relative w-full h-32 overflow-hidden flex items-center justify-center my-10">
-    <img 
-      src="../Pokemon/image/pokedexofmylife.gif" 
-      alt="Walking Pikachu" 
-      class="absolute h-16 sm:h-20 md:h-24 animate-walk"
-    >
-  </div>
+  <img 
+    src="../Pokemon/image/pokedexofmylife.gif" 
+    alt="Running Pikachu" 
+    class="absolute h-16 sm:h-20 md:h-24 animate-pikachu"
+  >
+</div>
+
+<!--second card-->
 
   <div class="card flex flex-col lg:flex-row mt-16 items-center bg-base-100 shadow-md rounded-xl p-6">
     <div class="card-body text-sm md:text-base lg:mr-8">
@@ -87,7 +106,87 @@
     </figure>
   </div>
 
-  <!-- Script -->
+
+
+<!--third card-->
+
+<div class="card flex flex-col lg:flex-row mt-16 items-center bg-base-100 shadow-md rounded-xl p-6">
+    <figure class="w-full lg:w-1/2 flex justify-center">
+      <img class="rounded-4xl max-w-xs sm:max-w-sm md:max-w-md" src="../Pokemon/image/_.jpeg" alt="">
+    </figure>
+    <div class="card-body text-sm md:text-base mt-6 lg:mt-0 lg:ml-8">
+      <h2 class="card-title text-amber-400 text-lg md:text-xl">April, 1998</h2>
+      <p class="mt-4 lg:text-base">
+Pokémon Center Co., Ltd. is established and Pokémon Center Tokyo is opened.Pokémon The First Movie: Mewtwo Strikes Back” and “Pikachu’s Vacation” are launched in Japan on july, 1998.In september 1998,The first TV anime series “Pokémon, I Choose You!” is launched with 111 TV broadcasting stations in U.S.
+
+      </p>
+    </div>
+  </div>
+
+
+
+
+
+<!--charizard flying-->
+
+
+<div class="relative w-full h-32 overflow-hidden flex items-center justify-center my-10">
+    <img 
+      src="../Pokemon/image/Best Animations.gif" 
+      alt="charizard flying" 
+      class="absolute h-16 sm:h-20 md:h-24 animate-fly"
+    >
+  </div>
+
+
+
+
+
+
+
+<!-- fourth-->
+
+<div class="card lg:text-center flex flex-col lg:flex-row mt-16 items-center bg-base-100 shadow-md rounded-xl p-8">
+    <figure class="w-full lg:w-1/2 flex justify-center">
+      <p class="mt-4 lg:pl-24 lg:text-base text-amber-100">
+In September 1998, Pokémon Red Version and Pokémon Blue Version were officially released in the United States for the Nintendo Game Boy, marking the franchise’s entry into the Western market. These games were localized adaptations of Japan’s Pokémon Red and Green (1996), with graphics and features refined from the later Japanese release, Pokémon Blue.
+
+Gameplay:
+Players took on the role of a young Pokémon Trainer in the Kanto region, setting out to capture, train, and battle with the original 151 Pokémon. The ultimate goal was to defeat the Elite Four and become the Pokémon Champion, while also completing the Pokédex.
+
+Link Cable Innovation:
+One of the most groundbreaking features was the use of the Game Boy Link Cable, allowing players to trade Pokémon and battle with friends. This mechanic was critical, since some Pokémon could only be obtained through trading—encouraging social interaction and making Pokémon more than just a single-player game.
+
+Cultural Impact:
+The U.S. release sparked what became known as “Pokémania.” Sales skyrocketed, and Pokémon quickly became a global cultural phenomenon. The games were accompanied by the launch of the Pokémon anime (with Ash, Pikachu, and friends), the trading card game, and a flood of toys, merchandise, and spin-offs.
+
+Legacy:
+By the end of 1999, Pokémon Red and Blue had sold over 10 million copies worldwide, laying the foundation for one of the most successful multimedia franchises in history.
+      </p>
+    </figure>
+    <div class="card-body text-sm md:text-base mt-6 lg:mt-0 lg:ml-8">
+      <h2 class="card-title text-amber-400 text-lg md:text-xl">September, 1998</h2>
+      
+            <img class="rounded-4xl lg:ml-10 max-w-xs sm:max-w-sm md:max-w-md mt-4" src="../Pokemon/image/Pokemon Red Version.jpeg" alt="">
+
+    </div>
+    
+  </div>
+
+<img class="w-auto h-auto" src="../Pokemon/image/_ (4).jpeg"></img>
+<!--image-->
+
+
+
+
+
+
+
+
+
+
+
+  <!--Script -->
   <script>
     const startBtn = document.getElementById('startBtn');
     const loader = document.getElementById('loader');
